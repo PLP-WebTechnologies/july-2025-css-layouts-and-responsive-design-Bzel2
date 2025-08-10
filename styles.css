@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #9CAF88; /* Vintage sage green */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar with Flexbox */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #5D5B4F; /* Vintage olive */
+    color: #F5E6D3; /* Soft cream */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #F5E6D3; /* Soft cream */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #D4B499; /* Muted terracotta */
+}
+
+/* Main content with Grid */
+.grid-container {
+    display: grid;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.hero {
+    text-align: center;
+    padding: 3rem;
+    background-color: rgba(245, 230, 211, 0.9); /* Semi-transparent cream */
+    border-radius: 8px;
+    color: #2F2E2C; /* Dark vintage brown */
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.card {
+    padding: 1rem;
+    background-color: rgba(212, 180, 153, 0.9); /* Semi-transparent terracotta */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: 0 4px 6px rgba(47, 46, 44, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card p {
+    font-weight: bold;
+    color: #2F2E2C; /* Dark vintage brown */
+}
+
+.footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #5D5B4F;
+    color: #F5E6D3;
+    margin-top: auto;  /* Changed from margin-top: 2rem */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
